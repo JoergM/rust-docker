@@ -1,7 +1,7 @@
 FROM rust:1.24.0 as builder
 ENV NAME=rust-docker
 
-# first build a dummy project with our dependencies to cache them in docker
+# First build a dummy project with our dependencies to cache them in Docker
 WORKDIR /usr/src
 RUN cargo new --bin ${NAME}
 WORKDIR /usr/src/${NAME}
@@ -15,7 +15,7 @@ COPY . .
 RUN cargo test
 RUN cargo build --release 
 
-# Second stage putting the build result into a debian jessie slim image
+# Second stage putting the build result into a debian jessie-slim image
 FROM debian:jessie-slim
 ENV NAME=rust-docker
 
