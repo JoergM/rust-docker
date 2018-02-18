@@ -1,3 +1,13 @@
+extern crate rand;
+
+use rand::Rng;
+
 fn main() {
-    println!("Hello, world!");
+    let mut rng = rand::thread_rng();
+    println!("Here is a random number: {}", rng.gen::<i32>());
+}
+
+#[test]
+fn foo_test() {
+    assert_eq!(1,1);
 }
