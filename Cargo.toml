@@ -1,7 +1,8 @@
 [package]
 name = "rust-docker"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Joerg Mueller"]
+edition = "2018"
 
 [dependencies]
-rand = "0.4"
+rand = "0.7"

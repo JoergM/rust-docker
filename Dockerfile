@@ -1,4 +1,4 @@
-FROM rust:1.24.0 as builder
+FROM rust:1.42.0 as builder
 ENV NAME=rust-docker
 
 # First build a dummy project with our dependencies to cache them in Docker
